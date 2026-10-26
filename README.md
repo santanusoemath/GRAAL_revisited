@@ -1,6 +1,6 @@
 NUMERICAL EXPERIMENTS
 
-This repository contains the Python code for the implementation of the AE-GRAAL and the aGRAAL algorithms on three benchmark problems.
+This repository contains the Python code for implementing the AE-GRAAL and aGRAAL algorithms on three benchmark problems.
 
 Install the dependencies:
 
