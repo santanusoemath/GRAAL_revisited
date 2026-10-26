@@ -96,7 +96,7 @@ def fista(F, prox_g, measure, x1, step, max_iterations=5000, tolerance=1e-9):
         history.append([k]+list(measure(y, F_y))+[step])
     return np.asarray(history), x
 
-#Optional implementation (E-GRAAL). This is an extended version of GRAAL, where one can select the convex combination parameter c up to 3.
+# Optional implementation (E-GRAAL). This is an extended version of GRAAL, where one can select the convex combination parameter c up to 3.
 
 def EGRAAL(F, prox_g, measure, x0, step, c=2, max_iterations=5000, tolerance=1e-9):
     """The E-GRAAL. Supply an admissible constant step."""
