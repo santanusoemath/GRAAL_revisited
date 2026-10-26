@@ -1,6 +1,6 @@
 NUMERICAL EXPERIMENTS
 
-This repository contains the Python code for implementing the AE-GRAAL and aGRAAL algorithms on three benchmark problems.
+This repository contains the Python code to implement the AE-GRAAL and aGRAAL algorithms for three benchmark problems.
 
 Install the dependencies:
 
@@ -16,10 +16,7 @@ Run one experiment at a time:
 Nash--Cournot: 1,000 firms, three scenarios, ten realisations each.
 Each method stops at a residual of 1e-9 or after 50,000 updates. Seven PDFs are saved:
 three residual plots, three step-size plots and one combined c-scan.
-Step-size plots use up to 1,000 updates of the first realisation. The scan
-uses c=1.1,1.2,...,2.9 and eta=(c-1)/(4*c), with the same data and starting
-points for every c. The plotted counts are medians, with the full range
-shaded; runs stopped at the limit count of 50,000 updates.
+Step-size plots use up to 1,000 updates of the first realisation.
 
 Cubic complementarity: dimensions 5,000, 10,000 and 50,000, with five
 realisations each. Stop at a residual of 1e-12 or after 4,000 updates.
