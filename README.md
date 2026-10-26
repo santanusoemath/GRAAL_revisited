@@ -1,34 +1,27 @@
 NUMERICAL EXPERIMENTS
 
-This repository contains the Python code to implement the AE-GRAAL and aGRAAL algorithms for three benchmark problems.
+This repository contains the Python code for comparing two AE-GRAAL parameter choices with aGRAAL on three benchmark problems. FISTA is also included for sparse logistic regression.
 
 Install the dependencies:
 
     python -m pip install -r requirements.txt
 
-Run one experiment at a time:
+Run each experiment separately:
 
     python nash.py
     python cubic_vi.py
     python sparse_log.py
 
+Nash–Cournot equilibrium
+The experiments use 1,000 firms, three scenarios and ten realisations per scenario. Each method stops when the natural residual reaches 1e-9 or after 50,000 updates. The script saves seven PDFs: three residual plots, three stepsize plots and one combined comparison across c values. Stepsize plots show the first realisation, up to 1,000 updates.
 
-Nash--Cournot: 1,000 firms, three scenarios, ten realisations each.
-Each method stops at a residual of 1e-9 or after 50,000 updates. Seven PDFs are saved:
-three residual plots, three step-size plots and one combined c-scan.
-Step-size plots use up to 1,000 updates of the first realisation.
+Cubic complementarity
+The experiments use dimensions 5,000, 10,000 and 50,000, with five realisations per dimension. Each method stops when the natural residual reaches 1e-12 or after 4,000 updates.
 
-Cubic complementarity: dimensions 5,000, 10,000 and 50,000, with five
-realisations each. Stop at a residual of 1e-12 or after 4,000 updates.
+Sparse logistic regression
+The selected datasets are mushrooms and real-sim.bz2. Place them in data/ following data/README.txt. All four methods perform 5,000 updates. The residual tolerance is used only to select a numerical reference for the optimal objective value. If no suitable reference is found, the objective-gap plot is omitted. A separate plot shows the first 500 stepsizes.
 
-Sparse logistic regression: the selected files are mushrooms and
-real-sim.bz2. Put them in data/ as described in data/README.txt.
-All four methods run for 5,000 updates. The tolerance determines a
-numerical objective reference; it does not stop the methods. If there
-is no suitable reference, the objective-gap PDF is omitted. The other
-PDF shows step sizes for the first 500 updates.
+All figures are saved as separate PDFs in results/.
 
-
-Malitsky's original aGRAAL code and experiments:
+Malitsky’s original aGRAAL implementation and experiments:
 https://github.com/ymalitsky/graal
-
