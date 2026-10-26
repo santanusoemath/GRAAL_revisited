@@ -6,7 +6,7 @@ from scipy.special import expit
 from scipy.sparse.linalg import svds
 from sklearn.datasets import load_svmlight_file
 from threadpoolctl import threadpool_limits
-from Algorithms import *
+from Algorithms import algorithm2, aGRAAL
 from graph_plots import *
 
 DATASETS = ['mushrooms', 'real-sim.bz2'] # Change or add datasets here.
