@@ -10,9 +10,9 @@ from Algorithms import algorithm2, aGRAAL
 from graph_plots import *
 
 DATASETS = ['mushrooms', 'real-sim.bz2'] # Change or add datasets here.
-MAX_ITERATIONS, TOLERANCE, SEED = 5000, 1e-9, 0  # Tolerance is used only to select the objective reference.
+MAX_ITERATIONS, TOLERANCE, SEED = 5000, 1e-9, 0  # TOLERANCE is used only to select the objective reference (i.e., J_*).
 STEP_ITERATIONS = 500 # Number of iterations to plot step sizes.
-VAR_EPS = 1e-2 # Margin for AE-GRAAL parameters.
+VAR_EPS = 1e-2 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT/'data'
 RESULTS = ROOT/'results'
