@@ -98,7 +98,7 @@ def fista(F, prox_g, measure, x1, step, max_iterations=5000, tolerance=1e-9):
 
 #Optional implementation (E-GRAAL). This is an extended version of GRAAL, where one can select the convex combination parameter c up to 3.
 
-def E-GRAAL(F, prox_g, measure, x0, step, c=2, max_iterations=5000, tolerance=1e-9):
+def EGRAAL(F, prox_g, measure, x0, step, c=2, max_iterations=5000, tolerance=1e-9):
     """The E-GRAAL. Supply an admissible constant step."""
     if not (1 < c < 3 and 0 < step < np.inf
             and max_iterations >= 1 and 0 <= tolerance < np.inf):
