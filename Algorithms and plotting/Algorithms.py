@@ -95,3 +95,27 @@ def fista(F, prox_g, measure, x1, step, max_iterations=5000, tolerance=1e-9):
         F_y = F(y)
         history.append([k]+list(measure(y, F_y))+[step])
     return np.asarray(history), x
+
+#Optional implementation (E-GRAAL). This is an extended version of GRAAL, where one can select the convex combination parameter c up to 3.
+
+def GRAAL(F, prox_g, measure, x0, step, c=2, max_iterations=5000, tolerance=1e-9):
+    """The E-GRAAL. Supply an admissible constant step."""
+    if not (1 < c < 3 and 0 < step < np.inf
+            and max_iterations >= 1 and 0 <= tolerance < np.inf):
+        raise ValueError('Check c, step, max_iterations and tolerance.')
+
+    x, x_bar = x0.copy(), x0.copy()
+    F_x = F(x)
+    history = [[0, *measure(x, F_x), step]]
+
+    for k in range(1, max_iterations+1):
+        if tolerance > 0 and history[-1][1] <= tolerance:
+            break
+
+        x_bar = ((c-1)*x+x_bar)/c # The convex combination step. Note that we have provided the theoretical analysis which restricts c to 3 as an upper bound.
+        x = prox_g(x_bar-step*F_x, step) # The proximal operator
+        F_x = F(x)
+
+        history.append([k, *measure(x, F_x), step])
+
+    return np.asarray(history), x
