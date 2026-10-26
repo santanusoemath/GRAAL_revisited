@@ -1,6 +1,6 @@
 NUMERICAL EXPERIMENTS
 
-This repository contains the Python code for comparing two AE-GRAAL parameter choices with aGRAAL on three benchmark problems. FISTA is also included for sparse logistic regression.
+This repository contains the Python code to compare AE-GRAAL (Adaptive Extended Golden Ratio Algorithm) against aGRAAL (Adaptive Golden Ratio Algorithm) on three benchmark problems. The algorithm FISTA is also included for sparse logistic regression.
 
 Install the dependencies:
 
@@ -13,7 +13,7 @@ Run each experiment separately:
     python sparse_log.py
 
 Nash–Cournot equilibrium
-The experiments use 1,000 firms, three scenarios and ten realisations per scenario. Each method stops when the natural residual reaches 1e-9 or after 50,000 updates. The script saves seven PDFs: three residual plots, three stepsize plots and one combined comparison across c values. Stepsize plots show the first realisation, up to 1,000 updates.
+The experiments use 1,000 firms, three scenarios and ten realisations per scenario. Each method stops when the natural residual (see the paper) reaches 1e-9 or after 50,000 updates. The script saves seven PDFs: three residual plots, three stepsize plots and one combined comparison across c values. Stepsize plots show the first realisation (seed 0), up to 1,000 updates.
 
 Cubic complementarity
 The experiments use dimensions 5,000, 10,000 and 50,000, with five realisations per dimension. Each method stops when the natural residual reaches 1e-12 or after 4,000 updates.
