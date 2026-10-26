@@ -1,6 +1,6 @@
 NUMERICAL EXPERIMENTS
 
-This repository contains the Python code to compare AE-GRAAL (Adaptive Extended Golden Ratio Algorithm) against aGRAAL (Adaptive Golden Ratio Algorithm) on three benchmark problems. The algorithm FISTA is also included for sparse logistic regression.
+This repository contains the Python code to compare AE-GRAAL (Adaptive Extended Golden Ratio Algorithm) against aGRAAL (Adaptive Golden Ratio Algorithm) on three benchmark problems.
 
 Install the dependencies:
 
@@ -19,7 +19,7 @@ Cubic complementarity:
 The experiments use dimensions 5,000, 10,000 and 50,000, with five realisations per dimension. Each method stops when the natural residual reaches 1e-12 or after 4,000 updates.
 
 Sparse logistic regression:
-The selected datasets are mushrooms and real-sim.bz2. Place them in data/ following data/README.txt. All four methods perform 5,000 updates. The residual tolerance is used only to select a numerical reference for the optimal objective value. If no suitable reference is found, the objective-gap plot is omitted. A separate plot shows the first 500 stepsizes.
+The selected datasets are mushrooms and real-sim.bz2. Place them in data/ following data/README.txt. All four methods perform 5,000 iterations on mushrooms and real-sim.bz2, and 1,800 iterations on ijcnn1. The residual tolerance is used only to select a numerical reference for the optimal objective value. If no suitable reference is found, try changing the number of iterations. A separate plot shows the first 500 stepsizes.
 
 All figures are saved as separate PDFs in results/.
 
