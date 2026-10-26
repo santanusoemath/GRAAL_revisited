@@ -12,5 +12,8 @@ The loader expects binary labels and one-based LIBSVM feature indices.
 It maps the larger label to +1 and the smaller label to -1. Features
 are not rescaled, and no intercept is added. 
 
+To learn more about the datasets, see the following source.
+Source: [LIBSVM dataset collection](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html).
+
 Note that the Nash and cubic experiments generate their own inputs and do not
 use this folder.
