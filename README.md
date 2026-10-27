@@ -1,6 +1,6 @@
 NUMERICAL EXPERIMENTS
 
-This repository contains the Python code to compare AE-GRAAL (Adaptive Extended Golden Ratio Algorithm) against aGRAAL (Adaptive Golden Ratio Algorithm) on three benchmark problems.
+This repository contains the Python code to compare AE-GRAAL (Adaptive Extended Golden Ratio Algorithm) against aGRAAL (Adaptive Golden Ratio Algorithm) on three benchmark problems. The paper is available at: https://arxiv.org/abs/2610.34975
 
 Install the dependencies:
 
