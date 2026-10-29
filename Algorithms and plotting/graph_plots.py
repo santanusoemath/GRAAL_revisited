@@ -2,7 +2,6 @@
 
 from pathlib import Path
 import numpy as np
-import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator, LogLocator, NullFormatter, StrMethodFormatter
 
