@@ -89,6 +89,11 @@ def plot_steps(step_histories, filename, max_iterations=1000):
     save_figure(fig, filename)
 
 
+"""This plot is for the Nash and cubic complementarity problems, where we test the AE-GRAAL algorithm
+on different values of the convex combination parameter c. This is one of the important plots, as c
+is sensitive to the other parameter choices of AE-GRAAL, especially to rho. For more details about
+the implementations, kindly refer to the paper and the corresponding experiment directory."""
+
 def plot_c_scan(scenario_counts, c_values, filename, label_prefix='Scenario '):
     set_plot_style()
     fig, ax = plt.subplots(figsize=(7, 5))
