@@ -21,7 +21,6 @@ The experiments use dimensions 5,000, 10,000 and 50,000, with five realisations 
 Sparse logistic regression:
 The selected datasets are mushrooms and real-sim.bz2. Place them in data/ following data/README.txt. All four methods perform 5,000 iterations on mushrooms and real-sim.bz2, and 1,800 iterations on ijcnn1. The residual tolerance is used only to select a numerical reference for the optimal objective value. If no suitable reference is found, try changing the number of iterations. A separate plot shows the first 500 stepsizes.
 
-All figures are saved as separate PDFs in results/.
 
 Malitsky’s original aGRAAL implementation and experiments:
 https://github.com/ymalitsky/graal
