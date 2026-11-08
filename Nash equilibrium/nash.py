@@ -5,7 +5,7 @@ total output $Q=\sum_i q_i$. We solve the resulting variational inequality
 on $C=[eps,\infty)^n$, eps>0. The positive lower bound ensures that the
 inverse demand is defined and $F$ is locally Lipschitz on $C$.
 
-For three cost scenarios, we compare AE-GRAAL-A, AE-GRAAL-B and aGRAAL
+For three cost scenarios, we compare AE-GRAAL-A, AE-GRAAL-B (the two instances of AE-GRAAL) and aGRAAL
 using the natural residual $R_k$ and the step sizes $\lambda_k$. We also
 plot the iteration counts of AE-GRAAL for $c=1.1,1.2,\ldots,2.9$.
 """
