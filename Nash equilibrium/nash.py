@@ -2,7 +2,7 @@ r"""Nash--Cournot experiments.
 
 Firm $i$ chooses its output $q_i$, while the market price depends on the
 total output $Q=\sum_i q_i$. We solve the resulting variational inequality
-on $C=[10^{-3},\infty)^n$. The positive lower bound ensures that the
+on $C=[eps,\infty)^n$, eps>0. The positive lower bound ensures that the
 inverse demand is defined and $F$ is locally Lipschitz on $C$.
 
 For three cost scenarios, we compare AE-GRAAL-A, AE-GRAAL-B and aGRAAL
